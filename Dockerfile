@@ -14,10 +14,10 @@ RUN npm rebuild node-sass --force
 
 # 配置环境变量
 ENV HOST 0.0.0.0
-ENV PORT 8000
+ENV PORT 8080
 
 # 容器对外暴露的端口号
-EXPOSE 8000
+EXPOSE 8080
 
 # 容器启动时执行的命令，类似npm run start
 CMD ["npm", "start"]

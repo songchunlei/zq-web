@@ -1,0 +1,72 @@
+$theme-color: #C00404;
+$title-color: #101010;
+$title-color-active: #1C5A97;
+$c-size: 1200px;
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+li{
+  list-style: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+a{
+  text-decoration: none
+}
+
+/* 主题颜色 */
+.theme-text {
+  color: $theme-color
+}
+.theme-bg {
+  background: $theme-color
+}
+.theme-border {
+  border: 1px solid $theme-color
+}
+
+/* 公用样式 */
+.m-t-sm {
+  margin-top: 10px;
+}
+.m-b-sm {
+  margin-bottom: 10px;
+}
+.m-l-sm {
+  margin-left: 10px;
+}
+.m-r-sm {
+  margin-right: 10px;
+}
+
+.m-t-md {
+  margin-top: 20px;
+}
+.m-b-md {
+  margin-bottom: 20px;
+}
+.m-l-md {
+  margin-left: 2px;
+}
+.m-r-md {
+  margin-right: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.overflow-h {
+  overflow: hidden;
+}

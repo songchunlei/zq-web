@@ -1,0 +1,313 @@
+{
+    "success": true,
+    "code": 0,
+    "state":null,
+    "msg":"",
+    "data": {
+        "tags": [
+            {
+                "name":"集团简介",
+                "id": "A001",
+                "childrens": [
+                    {
+                        "name": "董事长致辞",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A001",
+                        "id": "A001001",
+                        "checked": false
+                    },
+                    {
+                        "name": "集团概况",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A001",
+                        "id": "A001002",
+                        "checked": false
+                    },
+                    {
+                        "name": "集团领导",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A001",
+                        "id": "A001003",
+                        "checked": false
+                    },
+                    {
+                        "name": "总部机构",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A001",
+                        "id": "A001004",
+                        "checked": false
+                    },
+                    {
+                        "name": "集团荣誉",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A001",
+                        "id": "A001005",
+                        "checked": false
+                    },
+                    {
+                        "name": "集团风采",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A001",
+                        "id": "A001006",
+                        "checked": false
+                    }
+                ],
+                "checked": false
+            },
+            {
+                "name":"新闻中心",
+                "id": "A002",
+                "childrens": [
+                    {
+                        "name": "集团新闻",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A002",
+                        "id": "A002001",
+                        "checked": false
+                    },
+                    {
+                        "name": "媒体报道",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A002",
+                        "id": "A002002",
+                        "checked": false
+                    },
+                    {
+                        "name": "热点专题",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A002",
+                        "id": "A002003",
+                        "checked": false
+                    },
+                    {
+                        "name": "政策法规",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A002",
+                        "id": "A002004",
+                        "checked": false
+                    }
+                ],
+                "checked": false
+            },
+            {
+                "name":"成员单位",
+                "childrens": [
+                ],
+                "id": "A003",
+                "checked": false
+            },
+            {
+                "name":"主营业务",
+                "id": "A004",
+                "childrens": [
+                    {
+                        "name": "酒店",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A004",
+                        "id": "A004001",
+                        "checked": false
+                    },
+                    {
+                        "name": "培训中心",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A004",
+                        "id": "A004002",
+                        "checked": false
+                    },
+                    {
+                        "name": "养老休闲",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A004",
+                        "id": "A004003",
+                        "checked": false
+                    },
+                    {
+                        "name": "长租公寓",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A004",
+                        "id": "A004004",
+                        "checked": false
+                    },
+                    {
+                        "name": "物业租赁",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A004",
+                        "id": "A004005",
+                        "checked": false
+                    },
+                    {
+                        "name": "其他业务",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A004",
+                        "id": "A004006",
+                        "checked": false
+                    }
+                ],
+                "checked": false
+            },
+            {
+                "name":"企业文化",
+                "childrens": [
+                ],
+                "id": "A005",
+                "checked": false
+            },
+            {
+                "name":"两学一做",
+                "childrens": [
+                    {
+                        "name": "党群动态",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A005",
+                        "id": "A005001",
+                        "checked": false
+                    },
+                    {
+                        "name": "先进典型",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A005",
+                        "id": "A005002",
+                        "checked": false
+                    },
+                    {
+                        "name": "学习资料",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A005",
+                        "id": "A005003",
+                        "checked": false
+                    }
+                ],
+                "checked": false
+            },
+            {
+                "name": "人才招聘",
+                "id": "A006",
+                "childrens": [
+                    {
+                        "name": "人才战略",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A006",
+                        "id": "A006001",
+                        "checked": false
+                    },
+                    {
+                        "name": "招聘信息",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A006",
+                        "id": "A006002",
+                        "checked": false
+                    }
+                ],
+                "checked": false
+            },
+            {
+                "name":"辅助栏目",
+                "id": "A007",
+                "childrens": [
+                    {
+                        "name": "联系我们",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A007",
+                        "id": "A007001",
+                        "checked": false
+                    },
+                    {
+                        "name": "友情链接",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A007",
+                        "id": "A007002",
+                        "checked": false
+                    },
+                    {
+                        "name": "法律申明",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A007",
+                        "id": "A007003",
+                        "checked": false
+                    },
+                    {
+                        "name": "微信/微博",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A007",
+                        "id": "A007004",
+                        "checked": false
+                    }
+                ],
+                "checked": false
+            },
+            {
+                "name":"五大平台",
+                "id": "A008",
+                "childrens": [
+                    {
+                        "name": "培训",
+                        "type": "list",
+                        "childrens": [],
+                        "pid": "A008",
+                        "id": "A008001",
+                        "checked": false
+                    },
+                    {
+                        "name": "市场",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A008",
+                        "id": "A008002",
+                        "checked": false
+                    },
+                    {
+                        "name": "采购",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A008",
+                        "id": "A008003",
+                        "checked": false
+                    },
+                    {
+                        "name": "财务",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A008",
+                        "id": "A008004",
+                        "checked": false
+                    },
+                    {
+                        "name": "人事",
+                        "type": "text",
+                        "childrens": [],
+                        "pid": "A008",
+                        "id": "A008005",
+                        "checked": false
+                    }
+                ],
+                "checked": false
+            }
+
+        ]
+    }
+}

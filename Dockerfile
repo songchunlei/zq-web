@@ -10,6 +10,7 @@ WORKDIR /app
 
 # 安装项目依赖包
 RUN npm install
+RUN npm run build
 
 # 配置环境变量
 ENV HOST 0.0.0.0
@@ -19,4 +20,4 @@ ENV PORT 8080
 EXPOSE 8080
 
 # 容器启动时执行的命令，类似npm run start
-CMD ["npm run build", ""]
+CMD ["npm", "start"]

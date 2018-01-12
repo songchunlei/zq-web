@@ -1,18 +1,34 @@
-FROM node:argon
+FROM nginx
+MAINTAINER SongChunlei <songchunlei@qq.com>
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN apt-get update && apt-get install -y sudo curl bzip2 git vim gnupg
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN apt-get install -y nodejs && apt-get clean
 
-# Install app dependencies
-COPY package.json /usr/src/app/
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/nginx/access.log
+RUN ln -sf /dev/stderr /var/log/nginx/error.log
+
+COPY ./nginx /etc/nginx
+
+WORKDIR /app
+
+#预编译环境
+COPY package.json /app/
+RUN npm run build
+
+#编译代码
+COPY . /app/
 RUN npm install
 
-# Bundle app source
-COPY . /usr/src/app
+#复制打包后的代码进入nginx
+RUN cp -R /app/dist/*  /usr/share/nginx/html
 
-EXPOSE 8080
+# 配置环境变量
+ENV HOST 0.0.0.0
+ENV PORT 80
 
-# CMD [ "npm", "run build:js" ]
-#CMD [ "node", "." ]
-CMD npm run build:js && node .
+# 容器对外暴露的端口号
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

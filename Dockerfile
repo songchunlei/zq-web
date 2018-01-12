@@ -20,6 +20,3 @@ ENV PORT 8080
 
 # 容器对外暴露的端口号
 EXPOSE 8080
-
-# 容器启动时执行的命令，类似npm run start
-CMD ["npm run build", ""]

@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package.json /usr/src/app/
 RUN npm install
+RUN npm run build
 
 # Bundle app source
 COPY . /usr/src/app
@@ -15,4 +16,5 @@ EXPOSE 8080
 
 # CMD [ "npm", "run build:js" ]
 #CMD [ "node", "." ]
-CMD npm run build:js && node .
+#CMD npm run build:js && node .
+CMD [ "npm", "start" ]

@@ -15,9 +15,9 @@
       </transition>
       
 
-      <el-footer>
+      <el-container class="footerContainer">
         <zq-footer></zq-footer>
-      </el-footer>
+      </el-container>
       
     </el-container>
   </div>
@@ -63,6 +63,7 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
   }
+  .el-container{display: block}
   .el-container>.el-header,.el-container>.el-footer{ width: 1200px; }
   .el-container>.el-main{ width: 100% }
   .el-header,.el-main,.el-footer{margin: 0 auto; padding: 0px; }
@@ -123,5 +124,9 @@ export default {
   .el-submenu .el-menu-item.active{
     border-right: 2px solid $theme-color;
     background: #fff;
+  }
+  .footerContainer{
+    background: $theme-color;
+    padding: 20px 0px;
   }
 </style>

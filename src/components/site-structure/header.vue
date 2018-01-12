@@ -5,7 +5,7 @@
                 <li>
                     <a :class="{'active':'000000' == activeId}" href="javascript:void(0)" @click="menuClick(0, '000000')">首页</a>
                 </li>
-                <li v-for="(item, index) in menus">
+                <li v-for="(item, index) in menus" :key="item.id">
                     <a href="javascript:void(0)" :class="{'active':item.id == activeId}" @click="menuClick(index + 1, item.id)">{{item.name}}</a>
                 </li>
             </ul>

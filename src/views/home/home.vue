@@ -11,9 +11,9 @@
           <el-col :span="12">
             <div class="grid-content fixed-height bg-purple">
               <el-tabs v-model="activeOneIndex" @tab-click="handleClick">
-                <el-tab-pane v-for="(item, index) in firstTabs" :label="item.name" :name="item.id">
+                <el-tab-pane v-for="(item, index) in firstTabs" :label="item.name" :name="item.id" :key="item.id">
                   <ul class="tab-list-box">
-                    <li v-for="(item, index) in tabList" v-if="index <= 5">
+                    <li v-for="(item, index) in tabList" v-if="index <= 5" :key="item.id">
                       <router-link :to="{path: '/detail/' + item.id}">
                         <el-row :gutter="20">
                           <el-col :span="18">
@@ -48,7 +48,7 @@
 
       <el-row :gutter="60" class="homeBtns m-t-md">
         <el-col :span="2">&nbsp;</el-col>
-        <el-col :span="4" v-for="(item, index) in homeBtns">
+        <el-col :span="4" v-for="(item, index) in homeBtns" :key="item.id">
           <router-link class="i-span" :to="{path: item.link}">
             <i :class="'iconfont ' + item.icon"></i>
             <span>{{item.name}}</span>
@@ -57,14 +57,14 @@
         <el-col :span="2">&nbsp;</el-col>
       </el-row>
 
-      <div class="c-main-box block-center m-t-sm">
+      <div class="c-main-box block-center m-t-sm m-b-md">
         <el-row :gutter="60" class="m-t-md">
           <el-col :span="24">
             <div class="grid-content bg-purple">
               <el-tabs v-model="activeThreeIndex" @tab-click="handleClick">
                 <el-tab-pane label="成员单位" name="firstT">
                   <ul class="member-box">
-                    <li v-for="(item, index) in members">
+                    <li v-for="(item, index) in members" :key="item.id">
                       <a href="javascript:void(0);">{{item.name}}</a>
                     </li>
                   </ul>
@@ -141,8 +141,9 @@ export default {
     }
   },
   mounted () {
-    this.getBanners();
     this.init();
+    this.getBanners();
+    
   },
   methods: {
     init () {
@@ -159,7 +160,8 @@ export default {
       debugger;
       let _this = this;
       api.getTabListDataApi(url, id, function (res) {
-        _this.tabList = res.data.data
+        console.log(res.data.data);
+        _this.tabList = res.data.data;
       })
     },
 

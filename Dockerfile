@@ -1,26 +1,34 @@
-# 指定我们的基础镜像是node，版本是v8.0.0
-FROM node:8.0.0
-# 指定制作我们的镜像的联系人信息（镜像创建者）
-MAINTAINER songchunlei
+FROM nginx
+MAINTAINER SongChunlei <songchunlei@qq.com>
 
-# cd到app文件夹下
+RUN apt-get update && apt-get install -y sudo curl bzip2 git vim gnupg
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN apt-get install -y nodejs && apt-get clean
+
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/nginx/access.log
+RUN ln -sf /dev/stderr /var/log/nginx/error.log
+
+COPY ./nginx /etc/nginx
+
 WORKDIR /app
 
-# Install app dependencies
+#预编译环境
 COPY package.json /app/
+RUN npm run build
+
+#编译代码
+COPY . /app/
 RUN npm install
 
-# 将根目录下的文件都copy到container（运行此镜像的容器）文件系统的app文件夹下
-ADD . /app/
-
-#预编译
+#复制打包后的代码进入nginx
+RUN cp -R /app/dist/*  /usr/share/nginx/html
 
 # 配置环境变量
 ENV HOST 0.0.0.0
-ENV PORT 8080
+ENV PORT 80
 
 # 容器对外暴露的端口号
-EXPOSE 8080
+EXPOSE 80
 
-# 容器启动时执行的命令，类似npm run start
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]

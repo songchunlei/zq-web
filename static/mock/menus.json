@@ -13,6 +13,7 @@
                         "name": "董事长致辞",
                         "type": "text",
                         "childrens": [],
+                        "url":"groupSummaryFirst",
                         "pid": "A001",
                         "id": "A001001",
                         "checked": false
@@ -21,6 +22,7 @@
                         "name": "集团概况",
                         "type": "text",
                         "childrens": [],
+                        "url":"groupSummarySecond",
                         "pid": "A001",
                         "id": "A001002",
                         "checked": false
@@ -29,30 +31,34 @@
                         "name": "集团领导",
                         "type": "text",
                         "childrens": [],
+                        "url":"groupSummaryThird",
                         "pid": "A001",
                         "id": "A001003",
                         "checked": false
                     },
                     {
                         "name": "总部机构",
-                        "type": "list",
+                        "type": "text",
                         "childrens": [],
+                        "url":"groupSummaryFourth",
                         "pid": "A001",
                         "id": "A001004",
                         "checked": false
                     },
                     {
                         "name": "集团荣誉",
-                        "type": "list",
+                        "type": "text",
                         "childrens": [],
+                        "url":"groupSummaryFifth",
                         "pid": "A001",
                         "id": "A001005",
                         "checked": false
                     },
                     {
                         "name": "集团风采",
-                        "type": "list",
+                        "type": "text",
                         "childrens": [],
+                        "url":"groupSummarySixth",
                         "pid": "A001",
                         "id": "A001006",
                         "checked": false
@@ -68,30 +74,34 @@
                         "name": "集团新闻",
                         "type": "list",
                         "childrens": [],
+                        "url":"list",
                         "pid": "A002",
                         "id": "A002001",
                         "checked": false
                     },
                     {
                         "name": "媒体报道",
-                        "type": "text",
+                        "type": "list",
                         "childrens": [],
+                        "url":"list",
                         "pid": "A002",
                         "id": "A002002",
                         "checked": false
                     },
                     {
                         "name": "热点专题",
-                        "type": "text",
+                        "type": "list",
                         "childrens": [],
+                        "url":"newsThird",
                         "pid": "A002",
                         "id": "A002003",
                         "checked": false
                     },
                     {
                         "name": "政策法规",
-                        "type": "text",
+                        "type": "list",
                         "childrens": [],
+                        "url":"newsFourth",
                         "pid": "A002",
                         "id": "A002004",
                         "checked": false
@@ -101,8 +111,10 @@
             },
             {
                 "name":"成员单位",
+                "type": "text",
                 "childrens": [
                 ],
+                "url":"memberFirst",
                 "id": "A003",
                 "checked": false
             },
@@ -112,8 +124,9 @@
                 "childrens": [
                     {
                         "name": "酒店",
-                        "type": "list",
+                        "type": "text",
                         "childrens": [],
+                        "url":"businessFirst",
                         "pid": "A004",
                         "id": "A004001",
                         "checked": false
@@ -122,6 +135,7 @@
                         "name": "培训中心",
                         "type": "text",
                         "childrens": [],
+                        "url":"businessSecond",
                         "pid": "A004",
                         "id": "A004002",
                         "checked": false
@@ -130,6 +144,7 @@
                         "name": "养老休闲",
                         "type": "text",
                         "childrens": [],
+                        "url":"businessThird",
                         "pid": "A004",
                         "id": "A004003",
                         "checked": false
@@ -138,6 +153,7 @@
                         "name": "长租公寓",
                         "type": "text",
                         "childrens": [],
+                        "url":"businessFourth",
                         "pid": "A004",
                         "id": "A004004",
                         "checked": false
@@ -146,6 +162,7 @@
                         "name": "物业租赁",
                         "type": "text",
                         "childrens": [],
+                        "url":"businessFifth",
                         "pid": "A004",
                         "id": "A004005",
                         "checked": false
@@ -154,6 +171,7 @@
                         "name": "其他业务",
                         "type": "text",
                         "childrens": [],
+                        "url":"businessSixth",
                         "pid": "A004",
                         "id": "A004006",
                         "checked": false
@@ -165,34 +183,40 @@
                 "name":"企业文化",
                 "childrens": [
                 ],
+                "type": "text",
+                "url":"companyCulture",
                 "id": "A005",
                 "checked": false
             },
             {
                 "name":"两学一做",
+                "id": "A006",
                 "childrens": [
                     {
                         "name": "党群动态",
                         "type": "list",
                         "childrens": [],
-                        "pid": "A005",
-                        "id": "A005001",
+                        "url": "doStudyListByType",
+                        "pid": "A006",
+                        "id": "A006001",
                         "checked": false
                     },
                     {
                         "name": "先进典型",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A005",
-                        "id": "A005002",
+                        "url": "doStudySecond",
+                        "pid": "A006",
+                        "id": "A006002",
                         "checked": false
                     },
                     {
                         "name": "学习资料",
-                        "type": "text",
+                        "type": "list",
                         "childrens": [],
-                        "pid": "A005",
-                        "id": "A005003",
+                        "url": "doStudyThird",
+                        "pid": "A006",
+                        "id": "BEA64C2173AB4B5796D547F32A6BFDF3",
                         "checked": false
                     }
                 ],
@@ -200,22 +224,24 @@
             },
             {
                 "name": "人才招聘",
-                "id": "A006",
+                "id": "A007",
                 "childrens": [
                     {
                         "name": "人才战略",
-                        "type": "list",
+                        "type": "text",
                         "childrens": [],
-                        "pid": "A006",
-                        "id": "A006001",
+                        "url": "jobs",
+                        "pid": "A007",
+                        "id": "A007001",
                         "checked": false
                     },
                     {
                         "name": "招聘信息",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A006",
-                        "id": "A006002",
+                        "url": "jobs",
+                        "pid": "A007",
+                        "id": "A007002",
                         "checked": false
                     }
                 ],
@@ -223,38 +249,42 @@
             },
             {
                 "name":"辅助栏目",
-                "id": "A007",
+                "id": "A008",
                 "childrens": [
                     {
                         "name": "联系我们",
-                        "type": "list",
+                        "type": "text",
                         "childrens": [],
-                        "pid": "A007",
-                        "id": "A007001",
+                        "url": "columnDetail",
+                        "pid": "A008",
+                        "id": "A008001",
                         "checked": false
                     },
                     {
                         "name": "友情链接",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A007",
-                        "id": "A007002",
+                        "url": "columnDetail",
+                        "pid": "A008",
+                        "id": "A008002",
                         "checked": false
                     },
                     {
                         "name": "法律申明",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A007",
-                        "id": "A007003",
+                        "url": "columnDetail",
+                        "pid": "A008",
+                        "id": "A008003",
                         "checked": false
                     },
                     {
                         "name": "微信/微博",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A007",
-                        "id": "A007004",
+                        "url": "columnDetail",
+                        "pid": "A008",
+                        "id": "A008004",
                         "checked": false
                     }
                 ],
@@ -262,46 +292,51 @@
             },
             {
                 "name":"五大平台",
-                "id": "A008",
+                "id": "A009",
                 "childrens": [
                     {
                         "name": "培训",
-                        "type": "list",
+                        "type": "text",
                         "childrens": [],
-                        "pid": "A008",
-                        "id": "A008001",
+                        "url": "platformDetail",
+                        "pid": "A009",
+                        "id": "A009001",
                         "checked": false
                     },
                     {
                         "name": "市场",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A008",
-                        "id": "A008002",
+                        "url": "platformDetail",
+                        "pid": "A009",
+                        "id": "A009002",
                         "checked": false
                     },
                     {
                         "name": "采购",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A008",
-                        "id": "A008003",
+                        "url": "platformDetail",
+                        "pid": "A009",
+                        "id": "A009003",
                         "checked": false
                     },
                     {
                         "name": "财务",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A008",
-                        "id": "A008004",
+                        "url": "platformDetail",
+                        "pid": "A009",
+                        "id": "A009004",
                         "checked": false
                     },
                     {
                         "name": "人事",
                         "type": "text",
                         "childrens": [],
-                        "pid": "A008",
-                        "id": "A008005",
+                        "url": "platformDetail",
+                        "pid": "A009",
+                        "id": "A009005",
                         "checked": false
                     }
                 ],

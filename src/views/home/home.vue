@@ -1,6 +1,6 @@
 <template>
     <div id="homeBox" class="text-center overflow-h">
-      <el-carousel indicator-position="inside" height="350px" class="bannerBox">
+      <el-carousel indicator-position="inside" height="420px" class="bannerBox">
         <el-carousel-item v-for="(item, index) in banners" :key="item.id">
           <img :src="item.imgUrl"/>
         </el-carousel-item>
@@ -17,10 +17,10 @@
                       <router-link :to="{path: '/detail/' + item.id}">
                         <el-row :gutter="20">
                           <el-col :span="18">
-                            <span class="line-titile"><i class="iconfont icon-arrow-left-copy"></i>{{item.title}}</span>
+                            <span class="line-title"><i class="iconfont icon-arrow-left-copy"></i>{{item.title}}</span>
                           </el-col>
                           <el-col :span="6">
-                            <span class="line-titile text-right">{{item.createTime}}</span>
+                            <span class="line-title text-right">{{item.createTime}}</span>
                           </el-col>
                         </el-row>
                       </router-link>
@@ -35,7 +35,7 @@
               <el-tabs v-model="activeTwoIndex" @tab-click="handleClick">
                 <el-tab-pane label="集团风采" name="first">
                   <el-carousel type="card" indicator-position="inside" height="350px" class="bannerBox">
-                    <el-carousel-item v-for="(item, index) in banners" :key="item.id">
+                    <el-carousel-item v-for="(item, index) in bannersFc" :key="item.id">
                       <img :src="item.imgUrl"/>
                     </el-carousel-item>
                   </el-carousel>
@@ -116,6 +116,7 @@ export default {
   data () {
     return {
       banners: [], // 跑马灯
+      bannersFc: [], // 集团风采
       firstTabs: firstTabs(),
       activeOneIndex: '',
       activeTwoIndex: 'first',
@@ -143,7 +144,7 @@ export default {
   mounted () {
     this.init();
     this.getBanners();
-    
+    this.getBannersFc();
   },
   methods: {
     init () {
@@ -155,12 +156,16 @@ export default {
         _this.banners = res.data.data.banners;
       })
     },
+    getBannersFc () {
+      let _this = this;
+      api.getGroupImagesApi(function (res) {
+        _this.bannersFc = res.data.data.images;
+      })
+    },
     // 获取列表数据
     getTabList (url, id) {
-      debugger;
       let _this = this;
       api.getTabListDataApi(url, id, function (res) {
-        console.log(res.data.data);
         _this.tabList = res.data.data;
       })
     },
@@ -187,33 +192,7 @@ export default {
   .c-main-box { 
     width: $c-size;
   }
-  ul.tab-list-box{
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-  ul.tab-list-box>li {
-    height: 40px;
-    line-height: 40px;
-    overflow: hidden;
-    position: relative;
-    font-size: 14px;
-    border-bottom: #e5e5e5 solid 1px;
-  }
-  ul.tab-list-box>li:first-child~li{
-    
-  }
-  .line-titile {
-    color: $title-color;
-    width: 100%;
-    overflow: hidden;
-    text-overflow:ellipsis; 
-    white-space: nowrap;
-    display: inline-block;
-  }
-  .line-titile:hover {
-    color: $title-color-active;
-  }
+
   .fixed-height .el-tabs__content{
     height: 250px;
   }
@@ -263,5 +242,11 @@ export default {
   }
   ul.member-box>li>a:hover{
     color: $title-color-active
+  }
+  .el-carousel__item--card.is-in-stage{
+    opacity: 0.4;
+  }
+  .el-carousel__item--card.is-in-stage.is-active{
+    opacity: 1;
   }
 </style>

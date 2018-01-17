@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "code": 0,
+    "state":null,
+    "msg":"",
+    "data": {
+        "images": [
+            {
+                "imgUrl": "static/images/banner1.jpeg",
+                "link": "",
+                "id": "001",
+                "desc": ""
+            },
+            {
+                "imgUrl": "static/images/banner2.jpeg",
+                "link": "",
+                "id": "002",
+                "desc": ""
+            },
+            {
+                "imgUrl": "static/images/banner3.png",
+                "link": "",
+                "id": "003",
+                "desc": ""
+            }
+        ]
+    }
+}

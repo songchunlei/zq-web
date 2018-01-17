@@ -6,19 +6,7 @@
     "data": {
         "banners": [
             {
-                "imgUrl": "static/images/banner1.jpeg",
-                "link": "",
-                "id": "001",
-                "desc": ""
-            },
-            {
-                "imgUrl": "static/images/banner2.jpeg",
-                "link": "",
-                "id": "002",
-                "desc": ""
-            },
-            {
-                "imgUrl": "static/images/banner3.png",
+                "imgUrl": "static/images/xy19.jpg",
                 "link": "",
                 "id": "003",
                 "desc": ""

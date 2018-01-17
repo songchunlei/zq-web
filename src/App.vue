@@ -1,9 +1,8 @@
 <template>
-  <div class="main" style="height: 100%;" v-show="mainShow">
-    <el-container>
+  <div class="main source" style="height: 100%;" v-show="mainShow">
+    <el-container class="is-vertical c-mian">
       <zq-top></zq-top>
       <zq-header></zq-header>
-      
       
       <transition name="el-fade-in-linear">
         <el-main id="zqRouterBox">
@@ -15,10 +14,12 @@
       </transition>
       
 
-      <el-container class="footerContainer">
+      <el-container class="c-mian footerContainer m-t-md">
         <zq-footer></zq-footer>
       </el-container>
-      
+      <el-container class="bottomContainer">
+      <zq-bottom></zq-bottom>
+      </el-container>
     </el-container>
   </div>
 </template>
@@ -28,6 +29,7 @@ import api from './api';
 import zqTop from '@/components/site-structure/top';
 import zqHeader from '@/components/site-structure/header';
 import zqFooter from '@/components/site-structure/footer';
+import zqBottom from '@/components/site-structure/bottom';
 export default {
   name: 'app',
   data () {
@@ -39,7 +41,8 @@ export default {
   components: {
     zqTop,
     zqHeader,
-    zqFooter
+    zqFooter,
+    zqBottom
   },
   computed: {
 	},
@@ -62,15 +65,15 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+    height: 900px;
   }
-  .el-container{display: block}
-  .el-container>.el-header,.el-container>.el-footer{ width: 1200px; }
+  .el-container.c-mian>.el-header,.el-container.c-mian>.el-footer{ width: $c-size }
   .el-container>.el-main{ width: 100% }
   .el-header,.el-main,.el-footer{margin: 0 auto; padding: 0px; }
-  .logo-box{ padding-top: 10px; width: 50% }
+  .logo-box{ width: 50% }
   .top-header{ padding: 10px 0; position: relative }
   .logo-box>img{ height: 70px; position: absolute; left: 0px}
-  .search-box{ position: absolute; right: 0px; bottom: 20px; }
+  .search-box{ position: absolute; right: 0px; bottom: -10px; }
   .search-box>.el-input{
     vertical-align: top;
   }
@@ -80,7 +83,7 @@ export default {
   .tags-box{
     width: 100%;
     display: block;
-    line-height: 60px;
+    line-height: $header-height;
     color: #fff;
   }
   .tags-box>li{
@@ -108,6 +111,8 @@ export default {
     color: #fff;
     font-size: 18px;
     font-weight: 600;
+    height: 60px;
+    line-height: 60px;
   }
   .el-submenu .el-menu-item{
     background: #f7f7f7;
@@ -126,7 +131,7 @@ export default {
     background: #fff;
   }
   .footerContainer{
-    background: $theme-color;
+    background: #777;
     padding: 20px 0px;
   }
 </style>

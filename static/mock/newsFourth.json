@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "code": 0,
+    "state": null,
+    "msg": "",
+    "data": [
+        {
+            "title": "安全生产法",
+            "id": "001",
+            "createTime": "2017-02-03"
+        },
+        {
+            "title": "不动产登记暂行条例",
+            "id": "002",
+            "createTime": "2017-02-03"
+        },
+        {
+            "title": "国务院信访条例",
+            "id": "003",
+            "createTime": "2017-02-03"
+        },
+        {
+            "title": "浙江省信访条例",
+            "id": "004",
+            "createTime": "2017-02-03"
+        }
+    ]
+}

@@ -1,17 +1,24 @@
 <template>
+    
     <div id="coverList">
-        <ul>
-            <li c-for="(item, index) in listData">
+        <ul class="tab-list-box">
+            <li v-for="(item, index) in listData" v-if="index <= pageSize-1">
                 <router-link href="javascript:void(0);" :to="{ path: '/detail/' + item.id }">
-                  <i class="iconfont icon-arrow-left-copy"></i>
-                  <span>item.title</span>
+                <el-row :gutter="20">
+                    <el-col :span="18">
+                    <span class="line-title"><i class="iconfont icon-arrow-left-copy"></i>{{item.title}}</span>
+                    </el-col>
+                    <el-col :span="6">
+                    <span class="line-title text-right">{{item.createTime}}</span>
+                    </el-col>
+                </el-row>
                 </router-link>
             </li>
         </ul>
-        <el-pagination @current-change="handleCurrentChange"
-          background layout="prev, pager, next" :total="1000">
+        <el-pagination class="m-t-md" @current-change="handleCurrentChange"
+           :page-size="pageSize" background layout="prev, pager, next" :total="total">
         </el-pagination>
-    <div>
+    </div>
 </template>
 
 <script>
@@ -22,28 +29,43 @@ export default {
     data () {
         return {
             listData: [], // 列表数据
+            total: 0, // 总条数
+            pageSize: 10, // 每页显示条数
         }
     },
-    props: ['id', 'url'],
-    computed {
+    props: ['json', 'params', 'type'],
+    computed: {
 
+    },
+    watch: {
+        json (val) {
+            this.getListData();
+        }
     },
     mounted () {
-
+        this.getListData();
     },
-    motheds {
+    methods: {
         // 获取列表数据
         getListData () {
           let _this = this;
-          api.getListDataApi(this.url, this.id, function (res) {
-            _this.listData = res.data.data.list;
+          let json = this.json;
+          let params = this.params || {};
+          api.getListDataApi(json.url, params, function (res) {
+            _this.listData = res.data.data;
+            _this.total = res.data.data.length;
           })
         },
+
+        handleCurrentChange () {
+
+        }
         
     }
 }
 </script>
 
-<style>
+
+<style lang="scss">
 
 </style>

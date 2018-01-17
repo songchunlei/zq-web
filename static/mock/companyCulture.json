@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "code": 0,
+    "state":null,
+    "msg":"",
+    "data": {
+                "id":"1",
+                "name":"企业文化",
+                "title": "稳中求异，胸怀博大",
+                "createDate":"2018.1.1",
+                "desc": "<p><br></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:1px'>共同理想：造福于人类的幸福与世界的和平</span></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:1px'>&nbsp;</span></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:1px'>共同信仰：天佑善人、天自我立、自我主宰；真、善、</span></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:1px'>美；无疆大爱</span></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:1px'>&nbsp;</span></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:0'>共同追求：大众认同、大众参与、大众成就、大众分享</span></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:0'>&nbsp;</span></p><p><span style='font-size:21px;font-family:仿宋_GB2312;letter-spacing:1px'>共同理念：诚信、业绩、创新</span></p><p><span style='font-size:19px'>&nbsp;</span></p><p><br></p>"
+            }
+}

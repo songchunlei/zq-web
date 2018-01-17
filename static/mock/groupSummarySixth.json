@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "code": 0,
+    "state":null,
+    "msg":"",
+    "data": {
+                "id": "1",
+                "name": "集团风采",
+                "title": "",
+                "createDate": "2018.1.1",
+                "desc": "<p><br></p><p style='text-align:center'><span><img width='553' height='308' src='static/images/group1.png'></span></p><p style='text-align:center'><span><img width='554' height='345' src='static/images/group2.png'></span></p><p style='text-align:center'><span><img width='554' height='397' src='static/images/group3.png'></span></p><p style='text-align:center'><span><img width='554' height='372' src='static/images/group4.png'></span></p><p><br></p>"
+            }
+}

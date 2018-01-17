@@ -1,6 +1,6 @@
 <template>
-    <el-container class="tags-el-c theme-bg theme-border m-t-md">
-        <el-header style="margin-top: -1px;">
+    <el-container class="tags-el-c c-mian theme-bg theme-border m-t-md">
+        <el-header class="headerBox" style="margin-top: -1px;">
             <ul class="tags-box">
                 <li>
                     <a :class="{'active':'000000' == activeId}" href="javascript:void(0)" @click="menuClick(0, '000000')">首页</a>
@@ -22,8 +22,6 @@ export default {
     data () {
         return {
             menus: '', // 系统所有菜单
-            activeChilds: [], // 当前显示的子菜单
-            activeName: '', // 当前选择菜单name
             activeId: '000000', // 当前选中的 一级菜单ID
         }
     },
@@ -62,10 +60,10 @@ export default {
             let menus = this.menus;
             if (index > 0) {
                 index--;
-                if (menus[index]) {
-                    this.$store.commit('ACTIVE_MENUS_SAVE', menus[index]); // 保存当前选中的一级菜单
-                    this.activeName = menus[index].name;
-                    this.activeChilds = menus[index].childrens;
+                let activeMenu = menus[index];
+                if (activeMenu) {
+                    this.$store.commit('ACTIVE_MENUS_SAVE', activeMenu); // 保存当前选中的一级菜单
+                    this.$router.push({ path: '/zqino' });
                 }
 
                 //TODO 路由到非首页
@@ -84,6 +82,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../../assets/css/app.scss';
 
+.el-header.headerBox {
+    height: $header-height !important;
+}
 </style>

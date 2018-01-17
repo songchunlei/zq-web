@@ -1,5 +1,5 @@
 <template>
-    <el-header class="top-header" height="90px">
+    <el-header class="top-header" height="60px">
         <div class="logo-box">
             <img src="static/images/logo.png"/>
         </div>

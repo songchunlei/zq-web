@@ -1,16 +1,16 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
+import Vue from 'vue';
 import store from './store/store';
-import App from './App'
+import App from './App';
 
-import '../theme/index.css'
-import ElementUI from 'element-ui'
+import '../theme/index.css';
+import ElementUI from 'element-ui';
 
-import mixin from './mixins'
+import mixin from './mixins';
 import USP from './mixins/urlsearchparams';
 
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
 import routes from './router';
 
 VueRouter.prototype.goBack = function () {

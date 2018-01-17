@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "code": 0,
+    "state":null,
+    "msg":"",
+    "data": {
+                "id": "1",
+                "name": "集团荣誉",
+                "title": "",
+                "createDate": "2018.1.1",
+                "desc": "<p><br></p><p><span style='font-family:宋体;color:#333'>基本信息：</span></p><p><span style='font-family:宋体;color:#333'>浙江浙勤集团有限公司于</span><span style='font-family:Arial,sans-serif;color:#333'>2015</span><span style='font-family:宋体;color:#333'>年</span><span style='font-family:Arial,sans-serif;color:#333'>12</span><span style='font-family:宋体;color:#333'>月</span><span style='font-family:Arial,sans-serif;color:#333'>28</span><span style='font-family:宋体;color:#333'>日在浙江省工商行政管理局登记成立。法定代表人王剑，公司经营范围包括一般经营项目：实业投资，资产管理，物业经营管理等。</span></p><p><span style='font-family:Arial,sans-serif;color:#333'>&nbsp;</span></p><p><span style='font-family:宋体;color:#333'>企业地址</span><span style='font-family:Arial,sans-serif;color:#333'>:</span></p><p><span style='font-family:宋体;color:#333'>杭州市西湖区保俶路</span><span style='font-family:Arial,sans-serif;color:#333'>222</span><span style='font-family:宋体;color:#333'>号</span></p><p><span style='font-family:Arial,sans-serif;color:#333'>&nbsp;</span></p><p><span style='font-family:宋体;color:#333'>经营范围</span><span style='font-family:Arial,sans-serif;color:#333'>:</span></p><p><span style='font-family:宋体;color:#333'>实业投资，资产管理，物业经营管理，酒店管理，旅游服务（不含旅行社），会展服务，培训服务，咨询服务，房屋租赁、置换、维修服务。</span></p><p><span style='font-family:Arial,sans-serif;color:#333'>&nbsp;</span></p><p><br></p>"
+            }
+}

@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "code": 0,
+    "state":null,
+    "msg":"",
+    "data": [
+        { "name": "酒店", "id": "001", "icon": "icon-jiudian", "link": ""},
+        { "name": "培训中心", "id": "002", "icon": "icon-jiudian", "link": ""},
+        { "name": "养老休闲", "id": "003", "icon": "icon-jiudian", "link": ""},
+        { "name": "长租公寓", "id": "004", "icon": "icon-jiudian", "link": ""},
+        { "name": "物业租赁", "id": "005", "icon": "icon-jiudian", "link": ""}
+
+    ]
+
+           
+
+    
+}
